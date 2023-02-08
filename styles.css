@@ -1,0 +1,85 @@
+/* Global styles */
+html {
+	/* Avoid different widths of h1 background image, etc. on longer pages */
+    overflow-y: scroll;
+}
+body {
+	font-size: 16pt;
+}
+
+header, footer {
+	text-align: center;
+	width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+header table {
+	width: 100%;
+}
+footer {
+    border: 1px solid black;
+	margin-top: 10px;
+	padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* links to the other pages should not have visited styles */
+header a,
+header a:visited {
+	color: blue;
+}
+
+h1 {
+	/* Center the heading text */
+	text-align: center;
+	/* h1 background - extension.json snippet */
+    background-image: url('./extension example.JPG');
+    background-repeat: no-repeat;
+    background-position: top center;
+    filter: blur(1px);
+	/* Make heading visible over image */
+    color: white;
+    /* Include a bit more of the image */
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Utility classes */
+.logo {
+	width: 200px;
+}
+/* Loaded on the right so that middle column is in the center */
+.logo-hidden {
+	visibility: hidden;
+}
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+.width-body {
+	width: 50%;
+}
+
+/* For smaller widths: */
+@media (max-width: 950px) {
+	/* No spacing logo when not useful */
+	.logo-hidden {
+		display: none;
+	}
+	/* Increase width of main content */
+	.width-body {
+		width: 70%;
+	}
+}
+@media (max-width: 500px) {
+	/* No main logo when too small */
+	.logo {
+		display: none;
+	}
+	/* Increase width of main content even more */
+	.width-body {
+		width: 100%;
+	}
+}
